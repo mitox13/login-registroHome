@@ -8,7 +8,7 @@ const HeaderCliente = () => {
     const {clientelogueado} = useContext(AuthContext)
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-4 navbar__clientelogueado" >
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3 navbar__clientelogueado" >
                 <NavLink className="navbar-brand" to='/cliente/logueado'>MY FIT <span className='text-warning'>TEAM</span></NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -37,12 +37,12 @@ const HeaderCliente = () => {
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
                         <button
-                            className="btn btn-warning my-2 my-sm-0 ml-2"
+                            className="btn btn-warning my-2 my-sm-0 ml-2 "
                             onClick={() => {
                                 localStorage.removeItem("user")
                                 history.push('/')
                             }}
-                        >Cerrar Sesion</button>
+                        > Cerrar Sesion</button>
                     </form>
                 </div>
             </nav>

@@ -1,5 +1,5 @@
 import  axios from 'axios'
-import { URL_BACKEND, URL_MOCKAPI } from '../../environments/environments'
+import { URL_MOCKAPI } from '../../environments/environments'
 
 // crear un cliente en MOCKAPI
 export const postCliente = async (objCliente) => {

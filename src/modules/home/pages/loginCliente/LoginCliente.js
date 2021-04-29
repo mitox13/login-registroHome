@@ -21,7 +21,7 @@ const LoginCliente = () => {
         getClientes().then((rpta) => {
             setClientes(rpta.data);
         })
-    }, [])
+    },[])
 
 
     console.log(clientes);
@@ -34,18 +34,14 @@ const LoginCliente = () => {
         });
     }
     const handleSubmit = e => {
-        let contador = 0
         e.preventDefault();
         if (clientes) {
-            clientes.find((cliente) => {
-                if (cliente.contrasena === formulario.password && cliente.correo === formulario.correo) {
-                    history.push('/cliente/logueado')
-                    iniciarSesionClienteContext(cliente)
-                    console.log('estas logueado felicitaciones');
-                    contador++
-                }
-            })
-            if (contador === 0) {
+            const LogueoExitoso = clientes.find((cliente) => (cliente.contrasena === formulario.password && cliente.correo === formulario.correo))
+            if (LogueoExitoso) {
+                history.push('/cliente/logueado')
+                iniciarSesionClienteContext(LogueoExitoso)
+                console.log('estas logueado felicitaciones');
+            }else{
                 Swal.fire(
                     'Lo sentimos :C',
                     'Correo o contrasena :v incorrecto(s)',

@@ -19,7 +19,7 @@ const RegistroCliente = () => {
         contrasena: ""
     });
 
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
     const [cargando, setCargando] = useState(false)
 
     let { dni, primerNombre, segundoNombre, apellidoPaterno, apellidoMaterno, foto, correo, celular, direccion, contrasena } = formulario
@@ -67,19 +67,16 @@ const RegistroCliente = () => {
         // }
 
         if (clientes) {
-            let contador = 0
-            clientes.find((cliente) => {
-                if (cliente.correo === formulario.correo) {
-                    Swal.fire(
-                        'Error',
-                        'El correo ingresado ya existe',
-                        'error'
-                    )
-                    contador++
-                    setCargando(false)
-                }
-            })
-            if (contador === 0) {
+       
+            let clienteYaExistente =  clientes.find((cliente) => (cliente.correo === formulario.correo))
+            if (clienteYaExistente) {
+                Swal.fire(
+                    'Error',
+                    'El correo ingresado ya existe',
+                    'error'
+                )
+                setCargando(false)  
+            }else{
                 postCliente(formulario).then((rpta) => {
                     console.log(formulario);
                     if (rpta.status === 201) {
@@ -102,6 +99,7 @@ const RegistroCliente = () => {
 
                 });
             }
+
         }
 
     };
@@ -128,7 +126,6 @@ const RegistroCliente = () => {
                         <input
                             type="number"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
                             placeholder="Ingrese su DNI"
                             required           
                             name="dni"
@@ -138,7 +135,7 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su 1er Nombre"
                             required
                             title="oe k "
@@ -150,7 +147,7 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su 2do Nombre (Omitir si no tuviera)"
                             name="segundoNombre"
                             value={segundoNombre}
@@ -159,7 +156,7 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su apellido Paterno"
                             required
                             name="apellidoPaterno"
@@ -169,7 +166,7 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su apellido Materno"
                             required
                             name="apellidoMaterno"
@@ -193,7 +190,7 @@ const RegistroCliente = () => {
                         <input
                             type="email"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su correo"
                             required
                             name="correo"
@@ -203,7 +200,7 @@ const RegistroCliente = () => {
                         <input
                             type="number"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su celular"
                             required
                             name="celular"
@@ -213,7 +210,7 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese su direccion"
                             required
                             name="direccion"
@@ -223,7 +220,7 @@ const RegistroCliente = () => {
                         <input
                             type="password"
                             className="form-control form-control-sm mb-2"
-                            id="colFormLabelSm"
+                        
                             placeholder="Ingrese una contraseña"
                             required
                             name="contrasena"
