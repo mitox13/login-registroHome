@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
+import AuthState from './context/authState'
+import ClienteRouter from './modules/cliente/ClienteRouter';
+// import ErrorPage from './modules/home/ErrorPage';
+import HomeRouter from './modules/home/HomeRouter'
+import PrivateRouteCliente from './PrivateRouteCliente';
+import './styles/styles.css'
+import './styles/styleLoginClie2.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AuthState>
+
+      <Router>
+
+        <Switch>
+
+          {/* <PrivateRoute path="/admin">
+            <AdminRouter />
+          </PrivateRoute>
+          <PrivateRoute path="/profesional">
+            <ProfesionalRouter />
+          </PrivateRoute> */}
+          <PrivateRouteCliente path="/cliente">
+            <ClienteRouter />
+          </PrivateRouteCliente>
+          <Route path="/" >
+            <HomeRouter />
+          </Route>
+          {/* <Route component={ErrorPage} /> */}
+        </Switch>
+
+      </Router>
+
+    </AuthState>
+  )
 }
 
-export default App;
+export default App
