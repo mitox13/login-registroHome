@@ -8,7 +8,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-
+.navbar__clientelogueado{
+    background-color: #2C2B2B!important;
+}
 .navbar__princi{
     background-color: #2C2B2B;
     display: flex;
