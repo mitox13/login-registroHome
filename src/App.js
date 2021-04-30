@@ -7,6 +7,7 @@ import HomeRouter from './modules/home/HomeRouter'
 import PrivateRouteCliente from './PrivateRouteCliente';
 import './styles/styles.css'
 import './styles/styleLoginClie2.css'
+import './styles/Usuario-detalle.css'
 
 const App = () => {
   return (

@@ -6,7 +6,7 @@ const PantallaPrincipalClienteLogueado = () => {
 
     const { clientelogueado } = useContext(AuthContext)
     return (
-        <div className='container text-center'>
+        <div className='container text-center text-white'>
             <br />
             <h1 className='text-center'>  PANTALLA PRINCIPAL CLIENTE LOGUEADO</h1>
             <br />

@@ -17,19 +17,19 @@ const HeaderCliente = () => {
                 <div className="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <span className="nav-link text-center" style={{fontSize:'20px'}}>{clientelogueado.primerNombre + '  ' +clientelogueado.apellidoPaterno}</span>
+                            <span className="nav-link text-center" style={{fontSize:'20px'}}> Usuario : {clientelogueado.primerNombre + '  ' +clientelogueado.apellidoPaterno}</span>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active bg-warning"
                                 to="/cliente/logueado">INICIO</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active "
-                                to="/cliente/logueado">NOSOTROS</NavLink>
+                            <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active  "
+                                to="/cliente/logueado">CARRITO</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active "
-                                to="/cliente/logueado">CONTACTENOS</NavLink>
+                            <NavLink className="nav-link text-white btn ml-3 mr-3"  exact activeClassName="active bg-warning"
+                                to="/cliente/citas">TUS CITAS </NavLink>
                         </li>
 
                     </ul>

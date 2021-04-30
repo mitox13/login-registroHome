@@ -9,7 +9,6 @@ const AuthState = (props) => {
         clientelogueado:[],
         cargando:true
     })
-    
     const iniciarSesionClienteContext = (clientelogueado)=>{
         localStorage.setItem('user', JSON.stringify(clientelogueado))
         console.log(clientelogueado);

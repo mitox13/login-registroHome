@@ -1,9 +1,10 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
 import PantallaPrincipalClienteLogueado from './pages/PantallaPricincipalClienteLogueado/PantallaPrincipalClienteLogueado'
-import HeaderCliente  from './components/HeaderCliente'
+import HeaderCliente from './components/HeaderCliente'
 import FotterCliente from './components/FotterCliente'
-import {} from './components/FotterCliente'
+import { } from './components/FotterCliente'
+import CitasCliente from './pages/Citas/CitasCliente'
 
 const ClienteRouter = () => {
     return (
@@ -13,18 +14,16 @@ const ClienteRouter = () => {
 
             <Switch>
 
-                {/* <Route path={'/cliente/detalle'}>
-                <Detalle/>
-            </Route>
-            <Route path={'/cliente/elegirProfesional'}>
-                <ElegirProfesional/>
-            </Route> */}
+                <Route path={'/cliente/citas'}>
+                    <CitasCliente/>
+                </Route>
+                
                 <Route path={'/cliente/logueado'}>
                     <PantallaPrincipalClienteLogueado />
                 </Route>
             </Switch>
 
-            
+
             <FotterCliente />
         </>
     )

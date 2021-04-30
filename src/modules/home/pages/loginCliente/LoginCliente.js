@@ -23,8 +23,6 @@ const LoginCliente = () => {
         })
     },[])
 
-
-    console.log(clientes);
     const history = useHistory()
 
     const handleChange = e => {
@@ -54,16 +52,16 @@ const LoginCliente = () => {
 
     return (
         <>
-            <div className="sidenav bg-warning">
+            <div className="sidenav bg-warning ">
             </div>
             <div className="main ">
                 <div className="col-md-6 col-sm-12">
                     <div className="login-form">
 
-                        <h2>Login de Usuario</h2>
+                        <h2 className='text-white'>Login de Usuario</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <label>Usuario</label>
+                                <label className='text-white'>Usuario</label>
                                 <input type="text"
                                     className="form-control"
                                     placeholder="Usuario"
@@ -73,7 +71,7 @@ const LoginCliente = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Contraseña</label>
+                                <label className='text-white'>Contraseña</label>
                                 <input type="password"
                                     className="form-control"
                                     placeholder="Contraseña"

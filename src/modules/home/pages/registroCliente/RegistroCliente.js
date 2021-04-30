@@ -121,7 +121,7 @@ const RegistroCliente = () => {
                     ) : null} */}
 
                     <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center formu">
-                        <h2>Registrarse</h2>
+                        <h2 className='text-white'>Registrarse</h2>
 
                         <input
                             type="number"
