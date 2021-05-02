@@ -5,6 +5,7 @@ import HeaderCliente from './components/HeaderCliente'
 import FotterCliente from './components/FotterCliente'
 import { } from './components/FotterCliente'
 import CitasCliente from './pages/Citas/CitasCliente'
+import CarritoCliente from './pages/Carrito/CarritoCliente'
 
 const ClienteRouter = () => {
     return (
@@ -16,6 +17,9 @@ const ClienteRouter = () => {
 
                 <Route path={'/cliente/citas'}>
                     <CitasCliente/>
+                </Route>
+                <Route path={'/cliente/carrito'}>
+                   <CarritoCliente/>
                 </Route>
                 
                 <Route path={'/cliente/logueado'}>

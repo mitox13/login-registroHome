@@ -24,8 +24,8 @@ const HeaderCliente = () => {
                                 to="/cliente/logueado">INICIO</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active  "
-                                to="/cliente/logueado">CARRITO</NavLink>
+                            <NavLink className="nav-link text-white btn ml-3 mr-3" exact activeClassName="active  bg-warning"
+                                to="/cliente/carrito">CARRITO</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white btn ml-3 mr-3"  exact activeClassName="active bg-warning"
