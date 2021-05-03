@@ -85,8 +85,8 @@ input[type=number]::-webkit-outer-spin-button {
    
 }
 .div__form{
-    height: 85.3vh;
- 
+    /* height: 88.3vh; */
+    height: 88vh;
 }
 a{
     transition: 0.3s;
@@ -94,10 +94,11 @@ a{
 .btn:hover{
     background-color: #FEC600;
 }
-.footer__sty{
+.footer{
     color: white;
     margin-bottom: -20px !important;
     background-color: rgba(255,238,216,0.3);
+    margin-top: 15px;
 }
 .carta__pro{
     padding: 20px;
@@ -107,6 +108,7 @@ a{
 .body__card{
     background-color: rgba(255,238,216, 1) !important;
 }
+
 ::-webkit-scrollbar {
     display: none;
   }
@@ -134,19 +136,25 @@ a{
 }
 @media (max-width:982px) {
     .col__img{
-        visibility: hidden;
+        display: none;
     }
-    .row__imgform{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    
+    .div__form{
+        /* height: 88.3vh; */
+  
     }
+    /* .formu{
+        height: 20vh;
+        padding: 50px;
+        margin-top: 5vh;
+    } */
+   
+   
 }
 @media (max-width: 767px) 
 {
     .formu{
-        padding: 10px;
+        padding: 10px; 
         height: auto;
     } 
 }

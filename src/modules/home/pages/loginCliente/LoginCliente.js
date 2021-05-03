@@ -117,7 +117,7 @@ const LoginCliente = () => {
                            
                         <button type="submit" className="btn btn-warning text-white mb-5">Ingresar</button>
                                
-                        <p className='text-white text-center'>No tienes un cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white'}}>Registrar</NavLink></p>
+                        <p className='text-white text-center'>No tienes un cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white'}}>Regístrate</NavLink></p>
                         </form>
                     </div>
                 </div>

@@ -208,16 +208,26 @@ align-items: center;
     justify-content: space-around;
     align-items: center;
     color: #E9E9E9;
-    padding-top: 15px;
+    
+/* margin-top: 15px;
+position: absolute;
+width: 100%;
+bottom: 0;  */
+   
+   
 }
 .footer>p{
-    font-size:x-large;
+    font-size:large;
+  
 }
 .footer__social{
     display: flex;
     gap: 15px;
 }
-
+.footer__contacto>p{
+    margin-bottom: unset;
+    padding: 5px;
+}
 /* MediaQuerys */
 @media (max-width: 1072px) {
     .wrapper{

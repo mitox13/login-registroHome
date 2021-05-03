@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
-import FotterCliente from '../cliente/components/FotterCliente'
+import FooterHome from './components/FooterHome'
+
 import HeaderHome from './components/HeaderHome'
 import Inicio from './pages/inicio/Inicio'
 import LoginCliente from './pages/loginCliente/LoginCliente'
@@ -14,17 +15,17 @@ const HomeRouter = () => {
 
             <Switch>
                 <Route path='/loginCliente'>
-                    <LoginCliente/>
+                    <LoginCliente />
                 </Route>
                 <Route path='/registroCliente'>
-                    <RegistroCliente/>
+                    <RegistroCliente />
                 </Route>
                 <Route path='/'>
                     <Inicio />
                 </Route>
             </Switch>
+            <FooterHome />
 
-            <FotterCliente />
 
         </>
     )
