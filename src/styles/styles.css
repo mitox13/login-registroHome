@@ -14,8 +14,8 @@ input[type=number]::-webkit-outer-spin-button {
 .navbar__princi{
     background-color: #2C2B2B;
     display: flex;
-    gap: 60%;
-
+    gap: 50%;
+    padding-left: 10px;
 }
 .ul__princi{
     display: flex;  
@@ -27,6 +27,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: 0px;
     width: 100px;
     border-radius: 5px;
+
 }
 .btn__link:hover{
     cursor: pointer;
@@ -73,6 +74,10 @@ input[type=number]::-webkit-outer-spin-button {
 .div__btn{
     gap: 100px;
 }
+.col__img{
+    display: flex;
+    align-items: center;
+}
 .img__form{
     width: 100%;
     height: 100%;
@@ -80,9 +85,8 @@ input[type=number]::-webkit-outer-spin-button {
    
 }
 .div__form{
-    height: 92.3vh;
+    height: 85.3vh;
  
-
 }
 a{
     transition: 0.3s;
@@ -104,7 +108,7 @@ a{
     background-color: rgba(255,238,216, 1) !important;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
   }
   
   ::-webkit-scrollbar-track {
@@ -116,6 +120,18 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  @media (max-width:1444px) {
+    .navbar__princi{  
+        gap: 40%;
+        
+    }
+}
+@media (max-width:1286px) {
+    .navbar__princi{  
+        gap: 30%;
+    }
+}
 @media (max-width:982px) {
     .col__img{
         visibility: hidden;

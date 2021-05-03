@@ -26,23 +26,22 @@ const HeaderHome = () => {
         <div className="collapse navbar-collapse div__main" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto d-flex ul__princi">
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn " exact   activeClassName="active bg-warning" 
-                    to="/">INICIO</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" exact   activeClassName="active bg-warning" 
+                    to="/">INICIO </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn" to='/'>NOSOTROS</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" to='/'>NOSOTROS</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn" to='/'>ENTRENADORES</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" to='/'>ENTRENADORES</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn" exact activeClassName="active bg-warning" to='/loginCliente'>INGRESAR</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/loginCliente'>INGRESAR</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn" exact  activeClassName="active bg-warning"  to='/registroCliente'>REGISTRARSE</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" exact  activeClassName="active bg-warning"  to='/registroCliente'>REGISTRARSE</NavLink>
                 </li>
             </ul>
-
         </div>
     </nav>
     )

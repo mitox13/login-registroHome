@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom'
 import AuthContext from '../../../../context/authContext'
 import { useHistory } from 'react-router-dom'
 import { getClientes } from './../../../services/clienteService'
+import imagenLogin from './../../../../imagenes/flexiones.jpg'
 import Swal from 'sweetalert2'
 
 const LoginCliente = () => {
-    
-    
+
+
     const [formulario, setFormulario] = useState({
         correo: '',
         password: ''
@@ -21,7 +22,7 @@ const LoginCliente = () => {
         getClientes().then((rpta) => {
             setClientes(rpta.data);
         })
-    },[])
+    }, [])
 
     const history = useHistory()
 
@@ -39,7 +40,7 @@ const LoginCliente = () => {
                 history.push('/cliente/logueado')
                 iniciarSesionClienteContext(LogueoExitoso)
                 console.log('estas logueado felicitaciones');
-            }else{
+            } else {
                 Swal.fire(
                     'Lo sentimos :C',
                     'Correo o contrasena :v incorrecto(s)',
@@ -48,11 +49,11 @@ const LoginCliente = () => {
             }
         }
     }
-    
+
 
     return (
         <>
-            <div className="sidenav bg-warning ">
+            {/* <div className="sidenav bg-warning ">
             </div>
             <div className="main ">
                 <div className="col-md-6 col-sm-12">
@@ -85,7 +86,45 @@ const LoginCliente = () => {
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+            <main className="container-fluid">
+                <div className="row row__imgform">
+                    <div className="col col__img">
+                        <img src={imagenLogin} className="img__form" alt="" />
+                    </div>
+                    <div className="col-md div__form">
+                        <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center formu">
+                            <h2 className='text-white mb-4'>Login</h2>
+                            <label className='text-white mb-2 ' style={{fontSize:'20px'}}>Usuario</label>
+                            <input type="text"
+                                className="form-control mb-2"
+                                placeholder="Usuario"
+                                required
+                                name="correo"
+                                value={correo}
+                                onChange={handleChange}
+                            />
+                            <label className='text-white mb-2' style={{fontSize:'20px'}}>Contraseña</label>
+                            <input type="password"
+                                className="form-control mb-4"
+                                placeholder="Contraseña"
+                                required
+                                name="password"
+                                onChange={handleChange}
+                                value={password}
+                            />
+                           
+                        <button type="submit" className="btn btn-warning text-white mb-5">Ingresar</button>
+                               
+                        <p className='text-white text-center'>No tienes un cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white'}}>Registrar</NavLink></p>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+
+
         </>
     )
 }
