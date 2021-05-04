@@ -13,7 +13,7 @@ const FooterHome = () => {
             <i className="fab fa-facebook  fa-2x  "></i>
             <i className="fab fa-instagram  fa-2x" aria-hidden="true"></i>
             <i className="fab fa-twitter  fa-2x" aria-hidden="true"></i>
-            <i className="fab fa-github  fa-2x" aria-hidden="true"></i>
+            {/* <i className="fab fa-github  fa-2x" aria-hidden="true"></i> */}
         </div>
     </footer>
     )

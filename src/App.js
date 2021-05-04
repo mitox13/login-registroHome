@@ -5,9 +5,9 @@ import ClienteRouter from './modules/cliente/ClienteRouter';
 // import ErrorPage from './modules/home/ErrorPage';
 import HomeRouter from './modules/home/HomeRouter'
 import PrivateRouteCliente from './PrivateRouteCliente';
-import './styles/styles.css'
+import './styles/homeStyle.css'
 // import './styles/styleLoginClie2.css'
-import './styles/Usuario-detalle.css'
+import './styles/clienteStyle1.css'
 
 const App = () => {
   return (

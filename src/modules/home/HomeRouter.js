@@ -4,6 +4,7 @@ import FooterHome from './components/FooterHome'
 
 import HeaderHome from './components/HeaderHome'
 import Inicio from './pages/inicio/Inicio'
+import ProfesionalesListaHome from './pages/listaProfesionales/ProfesionalesListaHome'
 import LoginCliente from './pages/loginCliente/LoginCliente'
 import RegistroCliente from './pages/registroCliente/RegistroCliente'
 
@@ -14,6 +15,12 @@ const HomeRouter = () => {
             <HeaderHome />
 
             <Switch>
+
+
+                <Route path='/nuestros-Profesionales'>
+                    <ProfesionalesListaHome/>
+                </Route>
+
                 <Route path='/loginCliente'>
                     <LoginCliente />
                 </Route>

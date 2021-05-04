@@ -17,25 +17,28 @@ const AuthState = (props) => {
            clientelogueado:clientelogueado,
            cargando:false
        })
+   
     }
-    const iniciarSesionConLocalStorage = ()=>{
+
+    useEffect(()=>{
         if(localStorage.getItem('user')){
             iniciarSesionClienteContext(JSON.parse(localStorage.getItem('user')))
             console.log(JSON.parse(localStorage.getItem('user')));
             setState({
                 autenticado:true,
-                clientelogueado:JSON.parse(localStorage.getItem('user'))
-            })
-        }else{
-            setState({
+                clientelogueado:JSON.parse(localStorage.getItem('user')),
                 cargando:false
             })
         }
-    }
-    useEffect(()=>{
-        iniciarSesionConLocalStorage ();
+        else{
+            setState({
+                autenticado:false,
+                clientelogueado:[],
+                cargando:false
+            })
+        }
     },[])
-
+ 
     return (
         <AuthContext.Provider value={{...state,iniciarSesionClienteContext}}>
             {props.children}

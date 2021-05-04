@@ -16,7 +16,7 @@ import {NavLink} from 'react-router-dom'
 
 const HeaderHome = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light text-white navbar__princi sticky-top d-flex justify-content-end">
+        <nav className="navbar navbar-expand-lg navbar-light text-white navbar__princi sticky-top d-flex justify-content-end ">
         <NavLink className="navbar-brand text-white" to='/'>My<span className="text-warning">MFT H4L</span> </NavLink>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@ const HeaderHome = () => {
                     <NavLink className="nav-link text-white btn p-2" to='/'>NOSOTROS</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" to='/'>ENTRENADORES</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/nuestros-Profesionales'>ENTRENADORES</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/loginCliente'>INGRESAR</NavLink>

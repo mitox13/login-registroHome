@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import AuthContext from '../../../../context/authContext'
 import { useHistory } from 'react-router-dom'
-import { getClientes } from './../../../services/clienteService'
+import { getClientes } from '../../../../services/homeService'
 import imagenLogin from './../../../../imagenes/flexiones.jpg'
 import Swal from 'sweetalert2'
 
@@ -43,7 +43,7 @@ const LoginCliente = () => {
             } else {
                 Swal.fire(
                     'Lo sentimos :C',
-                    'Correo o contrasena :v incorrecto(s)',
+                    'Correo o contraseña incorrecto(s)',
                     'error'
                 )
             }
@@ -121,6 +121,10 @@ const LoginCliente = () => {
                         </form>
                     </div>
                 </div>
+
+
+            
+
             </main>
 
 

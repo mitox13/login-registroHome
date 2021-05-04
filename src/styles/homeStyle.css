@@ -122,7 +122,11 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-
+.card__profesional{
+    background-color: #cbbfbf6e;
+    color: white;
+    text-align: center;
+}
   @media (max-width:1444px) {
     .navbar__princi{  
         gap: 40%;

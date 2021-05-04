@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getClientes,postCliente } from './../../../services/clienteService'
+import { getClientes,postCliente } from '../../../../services/homeService'
 import imagenRegistro from './../../../../imagenes/pexels-ketut-subiyanto-5039659.jpg'
 import { useHistory } from "react-router-dom";
 import Swal from 'sweetalert2'
