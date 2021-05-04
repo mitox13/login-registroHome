@@ -6,6 +6,7 @@ import HeaderHome from './components/HeaderHome'
 import Inicio from './pages/inicio/Inicio'
 import ProfesionalesListaHome from './pages/listaProfesionales/ProfesionalesListaHome'
 import LoginCliente from './pages/loginCliente/LoginCliente'
+import NosotrosHome from './pages/Nosotros/NosotrosHome'
 import RegistroCliente from './pages/registroCliente/RegistroCliente'
 
 const HomeRouter = () => {
@@ -16,9 +17,11 @@ const HomeRouter = () => {
 
             <Switch>
 
-
                 <Route path='/nuestros-Profesionales'>
                     <ProfesionalesListaHome/>
+                </Route>
+                <Route path='/nosotros'>
+                    <NosotrosHome/>
                 </Route>
 
                 <Route path='/loginCliente'>

@@ -17,6 +17,10 @@ body{
     background-image: url(./../imagenes/background.png);
     background-size: auto;
 } */
+
+.form-control{
+    background-color: #FFEBB7;
+}
 .navbar__clientelogueado{
     background-color: #2C2B2B!important;
 }
@@ -118,9 +122,9 @@ a{
     background-color: rgba(255,238,216, 1) !important;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-  }
+  } */
   
   ::-webkit-scrollbar-track {
     background: #f1f1f1; 
@@ -135,6 +139,8 @@ a{
     background-color: #cbbfbf6e;
     color: white;
     text-align: center;
+    border-radius: 26px;
+    padding: 18px;
 }
   @media (max-width:1444px) {
     .navbar__princi{  
@@ -171,5 +177,13 @@ a{
         height: auto;
     } 
 }
-
-
+/* nosotros styles */
+.nosotros__container{
+    display: flex;
+    height: 75vh;
+}
+.imagenNosotros__myfitteam{
+    height: 100%;
+  width: 100%;
+  object-fit: none;
+}

@@ -86,7 +86,7 @@ const LoginCliente = () => {
                            
                         <button type="submit" className="btn btn-warning text-white mb-5">Ingresar</button>
                           
-                        <p className='text-white text-center'>No tienes un cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white'}}>Regístrate</NavLink></p>
+                        <p className='text-white text-center' >Aún no tienes una cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white',fontWeight:'bolder'}}>Regístrate</NavLink></p>
                         {
                             cargandoLogin?<div className="progress  m-5">
                             <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:'100%'}} ></div>

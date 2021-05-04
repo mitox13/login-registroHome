@@ -1,16 +1,3 @@
-// import React from 'react'
-
-// const HeaderHome = () => {
-//     return (
-//         <div>
-//             <h1>HEADER HOME</h1>
-//             <header>inicio  nosotros  entrenadores ingresar registrarse</header>
-//         </div>
-//     )
-// }
-
-// export default HeaderHome
-
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
@@ -30,7 +17,7 @@ const HeaderHome = () => {
                     to="/">INICIO </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" to='/'>NOSOTROS</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/nosotros'>NOSOTROS</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/nuestros-Profesionales'>ENTRENADORES</NavLink>

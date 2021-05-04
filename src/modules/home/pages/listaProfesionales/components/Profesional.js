@@ -12,14 +12,14 @@ const Profesional = ({ profesional }) => {
         setModalClick(false)
     }
     return (
-        <div className="card card__profesional">
+        <div className="card card__profesional ">
             <img src={profesional.linkFoto} alt=""
                 height="350"
                 className="card-img-top" />
             <div className="card-body">
                 <h5 className="card-title">{profesional.primerNombre} - {profesional.apellidoPaterno}</h5>
                 <br />
-                <h4 className="card-title">Profesion</h4>
+                <h4 className="card-title">Profesión</h4>
                 <p className="card-text">{profesional.profesion}</p>
                 <h4 className="card-title">Distrito</h4>
                 <p className="card-text">{profesional.distrito}</p>
@@ -34,32 +34,33 @@ const Profesional = ({ profesional }) => {
                 </button>
 
                 {
-                    modalClick ? <div className="modal fade bd-example-modal-lg text-secondary" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div className="modal-dialog modal-lg">
-                            <div className="modal-content">
+                    modalClick ? <div className="modal fade bd-example-modal-lg text-secondary " tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div className="modal-dialog modal-lg ">
+                            <div className="modal-content ">
                                 <div className="modal-header">
-                                    <h4>Información :</h4>
+                                    <h4>Profesional  My<span className='text-warning'>MFT H4L</span></h4>
                                     <button type="button" onClick={cerrarModal} className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true" style={{ fontSize: '30px' }}>&times;</span>
                                     </button>
                                 </div>
                                 <div className="modal-body">
                                     <div className="row d-flex flex-wrap">
-                                        <div className="col-xl-4 col-md-6 col-sm-12">
-                                            <figure>
-                                                <img src="http://placehold.it/200X300" alt="" />
-                                                <p>Video Demostrativo</p>
+                                        <div className="col-xl-4 col-md-6 col-sm-12 d-flex align-items-center">
+                                            <figure >
+                                                <img src={profesional.linkFoto} style={{borderRadius:'16px'}}  height="330" width='100%' alt="" />
+                                                
                                             </figure>
                                         </div>
+  
                                         <div className="col-xl-8 col-md-6 col-sm-12 text-left">
                                             <h2>{profesional.primerNombre}{profesional.apellidoPaterno}</h2>
-                                            <p> <strong> Profesión :</strong> {profesional.profesion}</p>
-                                            <h4 style={{ fontWeight: 'bold' }}> Descripción</h4>
+                                            <p> <i className="fas fa-graduation-cap"></i> <strong> Profesión :</strong> {profesional.profesion}</p>
+                                            <h4 style={{ fontWeight: 'bold',color:'#FEC600' }}> Descripción</h4>
                                             <p>{profesional.descripcion}</p>
-                                            <h4 style={{ fontWeight: 'bold' }}> Contacto</h4>
-                                            <p>  <i className="fas fa-phone    "></i> Celular : {profesional.celular}</p>
-                                            <p>  <i className="fas fa-envelope"></i> Correo : {profesional.correo}</p>
-                                            <p>  <i className="fas fa-map-marker-alt"></i> Distrito : {profesional.distrito}</p>
+                                            <h4 style={{ fontWeight: 'bold',color:'#FEC600' }}> Contacto</h4>
+                                            <p>  <i className="fas fa-phone    "></i> <strong>Celular :</strong>  {profesional.celular}</p>
+                                            <p>  <i className="fas fa-envelope"></i> <strong> Correo :</strong> {profesional.correo}</p>
+                                            <p>  <i className="fas fa-map-marker-alt"></i> <strong>  Distrito :</strong> {profesional.distrito}</p>
                                         </div>
 
                                     </div>

@@ -196,7 +196,7 @@ const RegistroCliente = () => {
                             onChange={handleChange}
                         />
                         <div className="d-flex justify-content-center div__btn">
-                            <button type="submit" className="btn btn-warning btn__canceenviar">Registrar</button>
+                            <button type="submit" className="btn btn-warning btn__canceenviar text-white">Registrar</button>
                         </div>
                         {cargando ?
                             (
