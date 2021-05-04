@@ -13,20 +13,20 @@ const HeaderHome = () => {
         <div className="collapse navbar-collapse div__main" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto d-flex ul__princi">
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" exact   activeClassName="active bg-warning" 
+                    <NavLink className="nav-link text-white btn p-2" data-toggle="collapse" data-target=".navbar-collapse.show" exact   activeClassName="active bg-warning" 
                     to="/">INICIO </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/nosotros'>NOSOTROS</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" data-toggle="collapse" data-target=".navbar-collapse.show" exact activeClassName="active bg-warning" to='/nosotros'>NOSOTROS</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/nuestros-Profesionales'>ENTRENADORES</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" data-toggle="collapse" data-target=".navbar-collapse.show" exact activeClassName="active bg-warning" to='/nuestros-Profesionales'>ENTRENADORES</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" exact activeClassName="active bg-warning" to='/loginCliente'>INGRESAR</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" data-toggle="collapse" data-target=".navbar-collapse.show" exact activeClassName="active bg-warning" to='/loginCliente'>INGRESAR</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link text-white btn p-2" exact  activeClassName="active bg-warning"  to='/registroCliente'>REGISTRARSE</NavLink>
+                    <NavLink className="nav-link text-white btn p-2" data-toggle="collapse" data-target=".navbar-collapse.show" exact  activeClassName="active bg-warning"  to='/registroCliente'>REGISTRARSE</NavLink>
                 </li>
             </ul>
         </div>

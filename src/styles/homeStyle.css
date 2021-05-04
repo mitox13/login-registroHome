@@ -99,7 +99,7 @@ body{
 }
 .div__form{
     /* height: 88.3vh; */
-    height: 88vh;
+    height: 88%;
 }
 a{
     transition: 0.3s;
@@ -178,12 +178,24 @@ a{
     } 
 }
 /* nosotros styles */
+.imagen__logo{
+    padding-bottom: 20px;
+    border-bottom: solid white 2px!important;
+}
+
+
+
 .nosotros__container{
     display: flex;
-    height: 75vh;
+    /* height: 10%; */
 }
+.presentacion__myfitteam{
+
+}
+
 .imagenNosotros__myfitteam{
-    height: 100%;
+    height: 85vh;
   width: 100%;
-  object-fit: none;
+  object-fit: contain;
+
 }
