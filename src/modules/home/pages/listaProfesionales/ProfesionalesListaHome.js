@@ -14,7 +14,7 @@ const ProfesionalesListaHome = () => {
     
     
     return (
-        <main className='mt-3 container-fluid'>
+        <main className='pt-3 container-fluid '>
             <h1 className='text-white text-center'>NUESTROS PROFESIONALES</h1>
             <div className="row">
                 <div className="col-md-12">

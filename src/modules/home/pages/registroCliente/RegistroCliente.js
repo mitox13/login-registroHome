@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getClientes,postCliente } from '../../../../services/homeService'
-import imagenRegistro from './../../../../imagenes/pexels-ketut-subiyanto-5039659.jpg'
+import imagenRegistro from './../../../../assets/img/pexels-ketut-subiyanto-5039659.jpg'
 import { useHistory } from "react-router-dom";
 import Swal from 'sweetalert2'
 
@@ -44,28 +44,7 @@ const RegistroCliente = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setCargando(true)
-        // if (
-        //     dni.trim() === "" ||
-        //     primerNombre.trim() === "" ||
-        //     segundoNombre.trim() === "" ||
-        //     apellidoPaterno.trim() === "" ||
-        //     apellidoMaterno.trim() === "" ||
-        //     foto.trim() === "" ||
-        //     correo.trim() === "" ||
-        //     celular.trim() === "" ||
-        //     direccion === "" ||
-        //     contrasena === ""
-        // ) {
-        //     // setError(true);
-        //     setCargando(false)
-        //     Swal.fire(
-        //         '',
-        //         'Todos los campos deben ser rellenados',
-        //         'warning'
-        //     )
-        //     return;
-        // }
-
+        
         if (clientes) {
        
             let clienteYaExistente =  clientes.find((cliente) => (cliente.correo === formulario.correo))
@@ -114,12 +93,6 @@ const RegistroCliente = () => {
                 </div>
                 <div className="col-md div__form">
 
-                    {/* {error ? (
-                        <div className="alert alert-warning mt-2">
-                            Todos los campos deben ser rellenados
-                        </div>
-                    ) : null} */}
-
                     <form onSubmit={handleSubmit} className="d-flex flex-column justify-content-center formu">
                         <h2 className='text-white'>Registrarse</h2>
 
@@ -127,7 +100,9 @@ const RegistroCliente = () => {
                             type="number"
                             className="form-control form-control-sm mb-2"
                             placeholder="Ingrese su DNI"
-                            required           
+                            // min={10000000}
+                            // max={99999999}
+                            required         
                             name="dni"
                             value={dni}
                             onChange={handleChange}
@@ -135,10 +110,8 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese su 1er Nombre"
-                            required
-                            title="oe k "
+                            required title="Debes rellenar el campo Nombre" 
                             name="primerNombre"
                             value={primerNombre}
                             onChange={handleChange}
@@ -147,7 +120,6 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese su 2do Nombre (Omitir si no tuviera)"
                             name="segundoNombre"
                             value={segundoNombre}
@@ -166,7 +138,6 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese su apellido Materno"
                             required
                             name="apellidoMaterno"
@@ -200,7 +171,6 @@ const RegistroCliente = () => {
                         <input
                             type="number"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese su celular"
                             required
                             name="celular"
@@ -210,7 +180,6 @@ const RegistroCliente = () => {
                         <input
                             type="text"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese su direccion"
                             required
                             name="direccion"
@@ -220,7 +189,6 @@ const RegistroCliente = () => {
                         <input
                             type="password"
                             className="form-control form-control-sm mb-2"
-                        
                             placeholder="Ingrese una contraseña"
                             required
                             name="contrasena"

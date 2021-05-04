@@ -8,6 +8,15 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+body{
+
+    background-image: url(./../imagenes/background.png);
+    background-size: auto;
+ }
+/* .container_profesionales_list{
+    background-image: url(./../imagenes/background.png);
+    background-size: auto;
+} */
 .navbar__clientelogueado{
     background-color: #2C2B2B!important;
 }

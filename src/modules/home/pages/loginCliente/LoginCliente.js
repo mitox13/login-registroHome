@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import AuthContext from '../../../../context/authContext'
 import { useHistory } from 'react-router-dom'
 import { getClientes } from '../../../../services/homeService'
-import imagenLogin from './../../../../imagenes/flexiones.jpg'
+import imagenLogin from './../../../../assets/img/flexiones.jpg'
 import Swal from 'sweetalert2'
 
 const LoginCliente = () => {
@@ -52,42 +52,7 @@ const LoginCliente = () => {
 
 
     return (
-        <>
-            {/* <div className="sidenav bg-warning ">
-            </div>
-            <div className="main ">
-                <div className="col-md-6 col-sm-12">
-                    <div className="login-form">
-
-                        <h2 className='text-white'>Login de Usuario</h2>
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label className='text-white'>Usuario</label>
-                                <input type="text"
-                                    className="form-control"
-                                    placeholder="Usuario"
-                                    name="correo"
-                                    value={correo}
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label className='text-white'>Contraseña</label>
-                                <input type="password"
-                                    className="form-control"
-                                    placeholder="Contraseña"
-                                    name="password"
-                                    onChange={handleChange}
-                                    value={password}
-                                />
-                            </div>
-                            <button type="submit" className="btn btn-orange">Ingresar</button>
-                            <NavLink to='/registroCliente' className="btn btn-white">Registrar</NavLink>
-                        </form>
-                    </div>
-                </div>
-            </div> */}
-
+      
             <main className="container-fluid">
                 <div className="row row__imgform">
                     <div className="col col__img">
@@ -121,15 +86,8 @@ const LoginCliente = () => {
                         </form>
                     </div>
                 </div>
-
-
-            
-
             </main>
-
-
-
-        </>
+       
     )
 }
 

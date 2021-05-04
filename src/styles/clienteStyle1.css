@@ -4,11 +4,7 @@ box-sizing:border-box;
 padding:0;
 font-family: sans-serif;
 }
-body{
-   /* background-color: rgb(85, 85, 85); */
-   background-image: url(./../imagenes/background.png);
-   background-size: cover;
-}
+
 .btn:focus  {
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
