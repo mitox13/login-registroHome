@@ -13,6 +13,7 @@ const LoginCliente = () => {
         correo: '',
         password: ''
     })
+    const [cargandoLogin, setCargandoLogin] = useState(false)
     const { correo, password } = formulario
 
     const { iniciarSesionClienteContext } = useContext(AuthContext)
@@ -34,11 +35,13 @@ const LoginCliente = () => {
     }
     const handleSubmit = e => {
         e.preventDefault();
+        setCargandoLogin(true)
         if (clientes) {
             const LogueoExitoso = clientes.find((cliente) => (cliente.contrasena === formulario.password && cliente.correo === formulario.correo))
             if (LogueoExitoso) {
                 history.push('/cliente/logueado')
                 iniciarSesionClienteContext(LogueoExitoso)
+                setCargandoLogin(false)
                 console.log('estas logueado felicitaciones');
             } else {
                 Swal.fire(
@@ -46,6 +49,7 @@ const LoginCliente = () => {
                     'Correo o contraseña incorrecto(s)',
                     'error'
                 )
+                setCargandoLogin(false)
             }
         }
     }
@@ -81,8 +85,13 @@ const LoginCliente = () => {
                             />
                            
                         <button type="submit" className="btn btn-warning text-white mb-5">Ingresar</button>
-                               
+                          
                         <p className='text-white text-center'>No tienes un cuenta? <NavLink to='/registroCliente'  style={{textDecoration:'none',color:'white'}}>Regístrate</NavLink></p>
+                        {
+                            cargandoLogin?<div className="progress  m-5">
+                            <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:'100%'}} ></div>
+                          </div>:null
+                        }  
                         </form>
                     </div>
                 </div>

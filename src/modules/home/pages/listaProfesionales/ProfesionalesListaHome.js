@@ -6,14 +6,21 @@ import Profesionales from './components/Profesionales'
 const ProfesionalesListaHome = () => {
     
     const [profesionales, setProfesionales] = useState([])
+    const [cargando, setCargando] = useState(true)
     useEffect(() => {
         getEmpleados().then((rpta) => {
             setProfesionales(rpta.data);
+            setCargando(false)
         })
+       
     }, [])
     
     
     return (
+
+        cargando?<div className="progress  m-5">
+        <div className="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:'100%'}} ></div>
+      </div>:
         <main className='pt-3 container-fluid '>
             <h1 className='text-white text-center'>NUESTROS PROFESIONALES</h1>
             <div className="row">
