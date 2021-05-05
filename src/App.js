@@ -6,7 +6,6 @@ import ClienteRouter from './modules/cliente/ClienteRouter';
 import HomeRouter from './modules/home/HomeRouter'
 import PrivateRouteCliente from './PrivateRouteCliente';
 import './styles/homeStyle.css'
-// import './styles/styleLoginClie2.css'
 import './styles/clienteStyle1.css'
 
 const App = () => {

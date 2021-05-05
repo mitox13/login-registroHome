@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 
 const Profesional = ({ profesional }) => {
 
-    console.log(profesional);
     const [modalClick, setModalClick] = useState(false)
 
     const abrirModal = () => {
