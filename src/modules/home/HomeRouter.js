@@ -1,13 +1,15 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
 import FooterHome from './components/FooterHome'
-
 import HeaderHome from './components/HeaderHome'
 import Inicio from './pages/inicio/Inicio'
 import ProfesionalesListaHome from './pages/listaProfesionales/ProfesionalesListaHome'
 import LoginCliente from './pages/loginCliente/LoginCliente'
 import NosotrosHome from './pages/Nosotros/NosotrosHome'
 import RegistroCliente from './pages/registroCliente/RegistroCliente'
+// Estilos del HOME
+import './../../styles/homeStyle.css'
+import './../../styles/clienteStyle1.css'
 
 const HomeRouter = () => {
     return (

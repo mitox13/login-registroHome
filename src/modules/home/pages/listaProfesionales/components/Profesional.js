@@ -28,7 +28,7 @@ const Profesional = ({ profesional }) => {
                 <button type="button"
                     style={{ fontWeight: 'bold' }}
                     onClick={abrirModal}
-                    className="btn btn-outline-warning" data-toggle="modal"
+                    className="btn btn-warning" data-toggle="modal"
                     data-target=".bd-example-modal-lg"
                 >Ver más Detalles
                 </button>
