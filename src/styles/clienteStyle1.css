@@ -4,7 +4,14 @@ box-sizing:border-box;
 padding:0;
 font-family: sans-serif;
 }
+.oferta__btn:hover{
+    background-color: green;
+    
+}
 
+.detalles__btn:hover{
+    background-color: rgb(246, 250, 0);  
+}
 .btn:focus  {
     -webkit-box-shadow: none!important;
     box-shadow: none!important;

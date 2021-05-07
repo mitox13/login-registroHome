@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-const Profesional = ({ profesional }) => {
+const Profesional = ({ profesional}) => {
 
     const [modalClick, setModalClick] = useState(false)
 
@@ -13,11 +13,10 @@ const Profesional = ({ profesional }) => {
     return (
         <div className="card card__profesional ">
             <img src={profesional.linkFoto} alt=""
-                height="350"
+                height="300"
                 className="card-img-top" />
             <div className="card-body">
                 <h5 className="card-title">{profesional.primerNombre} - {profesional.apellidoPaterno}</h5>
-                <br />
                 <h4 className="card-title">Profesión</h4>
                 <p className="card-text">{profesional.profesion}</p>
                 <h4 className="card-title">Distrito</h4>
@@ -33,7 +32,7 @@ const Profesional = ({ profesional }) => {
                 </button>
 
                 {
-                    modalClick ? <div className="modal fade bd-example-modal-lg text-secondary " tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    modalClick ? <div className="modal fade bd-example-modal-lg text-secondary " data-backdrop="static" data-keyboard="false" tabIndex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div className="modal-dialog modal-lg ">
                             <div className="modal-content ">
                                 <div className="modal-header">

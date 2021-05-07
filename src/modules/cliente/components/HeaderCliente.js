@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
-import AuthContext from '../../../context/authContext'
+import AuthContext from '../../../context/authLoginClienteContext'
 const HeaderCliente = () => {
 
     const history = useHistory()
@@ -9,7 +9,7 @@ const HeaderCliente = () => {
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3 navbar__clientelogueado mb-2 " >
-                <NavLink className="navbar-brand" to='/cliente/logueado'>MY FIT <span className='text-warning'>TEAM</span></NavLink>
+                <NavLink className="navbar-brand" to='/cliente/home'>MY FIT <span className='text-warning'>TEAM</span></NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -21,15 +21,15 @@ const HeaderCliente = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white btn ml-3 mr-3 p-2" exact activeClassName="active bg-warning"
-                                to="/cliente/logueado">INICIO</NavLink>
+                                to="/cliente/home">INICIO</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white btn ml-3 mr-3 p-2" exact activeClassName="active  bg-warning"
-                                to="/cliente/carrito">CARRITO</NavLink>
+                                to="/cliente/home">CARRITO</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link text-white btn ml-3 mr-3 p-2"  exact activeClassName="active bg-warning"
-                                to="/cliente/citas">TUS CITAS </NavLink>
+                                to="/cliente/home">TUS CITAS </NavLink>
                         </li>
 
                     </ul>

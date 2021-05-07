@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import AuthContext from '../../../../context/authContext'
+import AuthContext from '../../../../context/authLoginClienteContext'
 import { useHistory } from 'react-router-dom'
 import { getClientes } from '../../../../services/homeService'
 import imagenLogin from './../../../../assets/img/flexiones.jpg'
@@ -39,10 +39,10 @@ const LoginCliente = () => {
         if (clientes) {
             const LogueoExitoso = clientes.find((cliente) => (cliente.contrasena === formulario.password && cliente.correo === formulario.correo))
             if (LogueoExitoso) {
-                history.push('/cliente/logueado')
+                history.push('/cliente/home')
                 iniciarSesionClienteContext(LogueoExitoso)
                 setCargandoLogin(false)
-                console.log('estas logueado felicitaciones');
+                
             } else {
                 Swal.fire(
                     'Lo sentimos :C',

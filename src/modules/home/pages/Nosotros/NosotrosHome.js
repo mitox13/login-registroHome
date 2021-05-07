@@ -4,7 +4,7 @@ import logoPrincipal from '../../../../assets/img/logo.png'
 import nosotrosImagen from '../../../../assets/img/imagenNosotros.jpg'
 const NosotrosHome = () => {
     return (
-        <main className='container-fluid   '>
+        <main className='container-fluid  '>
 
             <div className="row nosotros__container pt-3 ml-2 mr-2 d-flex align-items-start">
                 <div className=" col-xl-6 col-md-5 presentacion__myfitteam p-4">

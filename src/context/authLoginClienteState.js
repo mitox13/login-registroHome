@@ -1,8 +1,8 @@
 import React,{ useEffect, useState} from 'react'
-import AuthContext from './authContext'
+import AuthContext from './authLoginClienteContext'
 
 
-const AuthState = (props) => {
+const AuthLoginClienteState = (props) => {
     
     const [state, setState] = useState({
         autenticado:false,
@@ -46,4 +46,4 @@ const AuthState = (props) => {
     )
 }
 
-export default AuthState
+export default AuthLoginClienteState

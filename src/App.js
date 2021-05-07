@@ -1,8 +1,7 @@
 import React from 'react'
-import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
-import AuthState from './context/authState'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AuthLoginClienteState from './context/authLoginClienteState'
 import ClienteRouter from './modules/cliente/ClienteRouter';
-// import ErrorPage from './modules/home/ErrorPage';
 import HomeRouter from './modules/home/HomeRouter'
 import PrivateRouteCliente from './PrivateRouteCliente';
 import './styles/homeStyle.css'
@@ -10,30 +9,32 @@ import './styles/clienteStyle1.css'
 
 const App = () => {
   return (
-    <AuthState>
 
+    <AuthLoginClienteState>
       <Router>
 
         <Switch>
 
           {/* <PrivateRoute path="/admin">
-            <AdminRouter />
-          </PrivateRoute>
-          <PrivateRoute path="/profesional">
-            <ProfesionalRouter />
-          </PrivateRoute> */}
+    <AdminRouter />
+  </PrivateRoute>
+  <PrivateRoute path="/profesional">
+    <ProfesionalRouter />
+  </PrivateRoute> */}
           <PrivateRouteCliente path="/cliente">
             <ClienteRouter />
           </PrivateRouteCliente>
           <Route path="/" >
             <HomeRouter />
           </Route>
-          {/* <Route component={ErrorPage} /> */}
+
         </Switch>
 
       </Router>
+    </AuthLoginClienteState>
 
-    </AuthState>
+
+
   )
 }
 
